@@ -6,9 +6,13 @@ body {
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    position: fixed;
+    /* border: 1px solid red;  */
+    top: 20px;
+    left: 400px;
 }
 
 nav {
@@ -37,10 +41,11 @@ nav a {
 }
 
 .rectangle {
-    width: 1053px;
+    width: calc(100%/1.6);
     height: 1146px;
     background: #EDEDED;
     border-radius: 50px;
+    margin-left: 500px;
 }
 
 .headerRec {
@@ -57,7 +62,8 @@ nav a {
 
 .allContent {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 20px;
 }
 
 .infoTask {
@@ -91,15 +97,19 @@ nav a {
 
 .grid {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    grid-gap: 25px;
+    grid-template-columns: 200px 200px 200px 200px;
+    margin-right: 110px;
+    grid-gap: 20px;
+}
+
+.grid .square {
+    margin-left: 15px;
 }
 
 .nameResTask {
     font-size: 18px;
     line-height: 23px;
-    margin: 20px 0;
+    margin: 40px 20px 20px;
 }
 
 .nameResTask span , #selectedPage{
@@ -120,6 +130,10 @@ nav a {
     color: #B9B9B9;
 }
 
+.aContainer{
+    display: flex;
+}
+
 .aContainer a:hover {
     border-bottom: 3px solid  lightblue;
 }
@@ -134,17 +148,12 @@ nav a {
     font-style: italic;
 }
 
-.flexRow {
-   display: flex;
-}
-
 .square2 {
     width: 175px;
     height: 175px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    margin: 15px;
 }
 
 .coursesContainer {
@@ -154,8 +163,12 @@ nav a {
     margin: 85px 50px 10px;
 }
 
-.flexRow {
-    margin: 15px;
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 175px);
+    grid-template-rows: repeat(4, 175px);
+    grid-gap: 20px;
+    margin: 20px 45px;
 }
 
 .containerContacts {
@@ -214,12 +227,9 @@ input:focus {
 }
 
 .square2 svg path:hover {
-    fill: #FF3C5A;
+    fill: #FF3C5A;  
     opacity: 1;
-}
-
-.square2 svg path {
-    transition: fill .2s linear;
+    transition: fill .5s linear;
 }
 
 .inputName {
@@ -227,7 +237,7 @@ input:focus {
     font-family: 'Roboto', sans-serif;
 }
 
-.inputLabel .label{
+.inputLabel .label {
     position: relative;
 }
 
